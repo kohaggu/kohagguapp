@@ -7,7 +7,10 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
-const keys = require('./config/keys')
+const keys = require('./config/keys');
+
+//setting up routes
+const index = require('./routes/index');
 // Map global promises
 mongoose.Promise = global.Promise;
 // Mongoose Connect
@@ -43,7 +46,7 @@ select:select
   },
   defaultLayout:'main'
 }));
-
+app.set('view engine', 'handlebars');
 //cookie parser and express session middleware
 app.use(cookieParser());
 app.use(session({
@@ -59,7 +62,7 @@ app.use((req, res, next) => {
   });
   //set static folder
   app.use(express.static(path.join(__dirname,'public')));
-
+app.use('/',index);
   const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
