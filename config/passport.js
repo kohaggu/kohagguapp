@@ -47,41 +47,40 @@ module.exports = function(passport){
     });
     passport.deserializeUser((id,done)=>{
     User.findById(id).then(user => done (null,user));
-    }); };
+    }); 
 
-//     passport.use(new FacebookStrategy({
-//         clientID: keys.facebookClientID,
-//         clientSecret: keys.facebookClientSecret,
-//         callbackURL: keys.callbackURL
-//       },
-//       function(accessToken, refreshToken, profile, done) {
-//         process.nextTick(() => {
-//             User.findOne({'facebook.facebookID': profile.id}, (err,user) => {
-//                 if(err)
-//                 return done(err);
-//                 if(user)
-//                 return done(null,user);
-//                 else {
-//                     const image = profile.photos[0].value.substring(0,profile.photos[0].value.indexOf('?'));
+    passport.use(new FacebookStrategy({
+        clientID: keys.facebookClientID,
+        clientSecret: keys.facebookClientSecret,
+        callbackURL: keys.callbackURL
+      },
+      function(accessToken, refreshToken, profile, done) {
+        process.nextTick(() => {
+            User.findOne({'facebook.facebookID': profile.id}, (err,user) => {
+                if(err)
+                return done(err);
+                if(user)
+                return done(null,user);
+                else {
+                    const image = profile.photos[0].value.substring(0,profile.photos[0].value.indexOf('?'));
         
-//         const newUser = {
-//             facebookID:profile.id,
-//             firstName:profile.name.givenName,
-//             lastName:profile.name.familyName,
-//             email: profile.emails[0].value,
-//             image: image
-//         }
-//         new User(newUser)
-//              .save(() => {
-//                  if(err)
-//                  throw err;
-//                  return done(null,newUser)
+        const newUser = User()
+            newUser.facebook.facebookID =profile.id;
+            newUser.facebook.firstName =profile.name.givenName;
+            newUserfacebook.lastName =profile.name.familyName;
+            newUseremail= profile.emails[0].value;
+            newUser.image = image;
+        
+        newUser.save(() => {
+                 if(err)
+                 throw err;
+                 return done(null,newUser)
 
-//              })
-//                 }
+             })
+                }
 
-//             })
-//         })
-//       }
-//     ));
-// };
+            })
+        })
+      }
+    ));
+};

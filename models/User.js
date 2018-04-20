@@ -22,26 +22,26 @@ const UserSchema = new Schema({
     image:{
      type:String
     }
+    },
+    facebook:{
+        facebookID:{
+            type:String,
+            required:true
+        },
+        email:{
+            type:String,
+            required:true
+        },
+        firstName:{
+            type:String,
+        },
+        lastName:{
+            type:String,
+        },
+        image:{
+         type:String
+        }
     }
-//     facebook:{
-//         facebookID:{
-//             type:String,
-//             required:true
-//         },
-//         email:{
-//             type:String,
-//             required:true
-//         },
-//         firstName:{
-//             type:String,
-//         },
-//         lastName:{
-//             type:String,
-//         },
-//         image:{
-//          type:String
-//         }
-//     }
     });
 
 //create collection and add scehma
