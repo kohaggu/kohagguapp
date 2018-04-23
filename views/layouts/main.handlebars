@@ -14,16 +14,25 @@
 </head>
 <body>
   <h1>welcome to notes diyo</h1>
-  
-
+  <main>
+  <div class="container">
+    {{{body}}}
+  </div>
+</main>
     <script
   src="http://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
-    <script>
-     
+     <script>
+      $(document).ready(() => {
+        $('.button-collapse').sideNav();
+        $('select').material_select();
+      });
+      CKEDITOR.replace('body',{
+        plugins:'wysiwygarea,toolbar,basicstyles,link'
+      });
     </script>
 </body>
 

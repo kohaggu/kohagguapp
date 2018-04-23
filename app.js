@@ -9,10 +9,13 @@ const session = require('express-session');
 const passport = require('passport');
 
 const keys = require('./config/keys');
+//loading models
 require('./models/User')
+require('./models/Discuss');
 // Passport Config
 require('./config/passport')(passport);
 //setting up routes
+const discussion = require('./routes/discussion');
 const index = require('./routes/index');
 const auth = require('./routes/auth');
 // Map global promises
@@ -69,8 +72,10 @@ app.use((req, res, next) => {
   });
   //set static folder
   app.use(express.static(path.join(__dirname,'public')));
-app.use('/',index);
+//declaring routes
+  app.use('/',index);
 app.use('/auth',auth);
+app.use('/discuss',discussion);
   const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
