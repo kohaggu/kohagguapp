@@ -24,13 +24,13 @@ req.logout();
 res.redirect('/');
 });
 // facebook
-router.get('/facebook',
-  passport.authenticate('facebook'));
+// router.get('/facebook',
+//   passport.authenticate('facebook'));
 
-router.get('/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.send('facebook auth done');
-  })
+// router.get('/facebook/callback',
+//   passport.authenticate('facebook', { failureRedirect: '/' }),
+//   function(req, res) {
+//     // Successful authentication, redirect home.
+//     res.send('facebook auth done');
+//   })
 module.exports = router;
