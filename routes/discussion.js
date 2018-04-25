@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const Discuss = mongoose.model('discussion')
 const User = mongoose.model('users');
+const {ensureAuthenticated, ensureGuest} = require('../helpers/ensureauth');
 
-router.get('/creatediscussion', (req,res) => {
+router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
     res.render('discussions/add');
 });
 //add discussion form
