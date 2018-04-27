@@ -1,19 +1,16 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
   .nav-wrapper .fa-bars {
     font-size: 30px;
   }
-  footer{
-    margin-top: 20px;
-    
-  }
+ 
   .story-text{
     height: 100px;
   }
@@ -23,4 +20,26 @@ body {
   #delete-form{
     display: inline-block;
   }
-  
+  body, html {
+    height: 100%;
+    background-image: url("images/abc.jpg");
+}
+
+.bg { 
+    /* The image used */
+    background-image: url("images/abc.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-footer {
+  background-color: #92841A;
+}
+.navcolor{
+  background-color: #92841A
+}
