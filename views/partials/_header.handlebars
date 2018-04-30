@@ -1,15 +1,15 @@
 <nav class="navcolor">
   <div class="container">
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo center">NotesDiyo</a>
-      <a href="#" data-activates="main-menu" class="button-collapse show-on-large"><i class="fa fa-bars"></i></a>
+      <a href="/" class="brand-logo center black-text">NotesDiyo</a>
+      <a href="#" data-activates="main-menu" class="button-collapse show-on-large black-text"><i class="fa fa-bars"></i></a>
       <!-- RIGHT NAV -->
       <ul class="right hide-on-small-only">
         {{#if user}}
           <li><a href="/dashboard">Welcome {{user.firstName}}</a></li>
           <li><a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
         {{else}}
-          <li><a href="/discuss"><i class="fa fa-book"></i> Discussions</a></li>
+          <li class="black-text"><a href="/discuss"><i class="fa fa-book black-text"></i> Discussions</a></li>
         {{/if}}
       </ul>
       <!-- side menu-->
