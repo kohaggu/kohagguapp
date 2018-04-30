@@ -5,6 +5,10 @@ const Discuss = mongoose.model('discussion')
 const User = mongoose.model('users');
 const {ensureAuthenticated, ensureGuest} = require('../helpers/ensureauth');
 
+
+router.get('/', (req,res) => {
+res.send('here stories will appear');
+});
 router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
     res.render('discussions/add');
 });
