@@ -25,18 +25,18 @@ main {
     /* background-image: url("images/abc.jpg"); */
 }
 
-.bg { 
+/* .bg { 
     /* The image used */
     /* background-image: url("images/abc.jpg"); */
 
     /* Full height */
-    height: 100%; 
+    /* height: 100%;  */
 
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    /* background-position: center; */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+/* } */ 
 .page-footer {
   background-color: #DBD380;
 }
