@@ -22,12 +22,12 @@ main {
   }
   body, html {
     height: 100%;
-    background-image: url("images/abc.jpg");
+    /* background-image: url("images/abc.jpg"); */
 }
 
 .bg { 
     /* The image used */
-    background-image: url("images/abc.jpg");
+    /* background-image: url("images/abc.jpg"); */
 
     /* Full height */
     height: 100%; 
