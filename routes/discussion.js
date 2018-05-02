@@ -7,7 +7,14 @@ const {ensureAuthenticated, ensureGuest} = require('../helpers/ensureauth');
 
 
 router.get('/', (req,res) => {
-res.send('here stories will appear');
+  Discuss.find({})
+  .populate('user')
+  .sort({date:'desc'})
+  .then(discuss => {
+      res.render('discussions/index', {
+      discuss: discuss
+    });
+  });
 });
 router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
     res.render('discussions/add');
