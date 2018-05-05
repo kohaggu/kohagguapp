@@ -1,6 +1,6 @@
 <h1>Edit your Discussion</h1>
 <div class="row">
-    <form action="/discuss/creatediscussion" method = "post" class="col s12">
+    <form action="/discuss/{{discuss.id}}?_method=PUT" method="post" class="col s12">
     <div class="row">
         <div class="input-field">
             <input type="text" name = "title" value="{{discuss.title}}">

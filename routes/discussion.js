@@ -20,9 +20,9 @@ router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
     res.render('discussions/add');
 });
 //add discussion form
-router.get('/redirectwork', (req,res) => {
-    res.send('Redirect work');
-})
+// router.get('/redirectwork', (req,res) => {
+//     res.send('Redirect work');
+// })
 router.post('/creatediscussion', (req,res) => {
 let allowComments;
 
@@ -40,7 +40,7 @@ let allowComments;
     user: req.user.id
   }
 
-  // Create Story
+  // Create discuss
   new Discuss(newDiscuss)
     .save()
     .then(discuss => {
@@ -62,4 +62,32 @@ router.get('/edit/:id', (req,res) => {
   });
 
 });
+
+// Edit Form Process
+router.put('/:id', (req, res) => {
+  Discuss.findOne({
+    _id: req.params.id
+  })
+  .then(discuss => {
+    let allowComments;
+    
+    if(req.body.allowComments){
+      allowComments = true;
+    } else {
+      allowComments = false;
+    }
+
+    // New values
+    discuss.title = req.body.title;
+    discuss.body = req.body.body;
+    discuss.status = req.body.status;
+    discuss.allowComments = allowComments;
+
+    discuss.save()
+      .then(discuss => {
+        res.redirect('/dashboard');
+      });
+  });
+});
+
 module.exports = router;
