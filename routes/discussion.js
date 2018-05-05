@@ -89,5 +89,13 @@ router.put('/:id', (req, res) => {
       });
   });
 });
+router.delete('/delete/:id' , (req,res) => {
+   Discuss.remove({
+     _id: req.params.id
+   })
+   .then(() => {
+     res.redirect('/dashboard');
+   })
+});
 
 module.exports = router;
