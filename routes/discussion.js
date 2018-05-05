@@ -47,5 +47,19 @@ let allowComments;
       res.redirect(`/discuss/redirectwork`);
     });
 });
+router.get('/edit/:id', (req,res) => {
+  Discuss.findOne({
+    _id: req.params.id
+  })
+  .then(discuss => {
+    if(discuss.user != req.user.id){
+      res.redirect('/discuss');
+    } else {
+      res.render('discussions/edit', {
+        discuss: discuss
+      });
+    }
+  });
 
+});
 module.exports = router;

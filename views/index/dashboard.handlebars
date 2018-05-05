@@ -16,7 +16,7 @@
             <td><a href="/discuss/show/{{id}}">{{title}}</a></td>
             <td>{{formatDate date 'MMMM Do YYYY'}}</td>
              <td><span class="dash-status">{{subject}}</span></td>    
-            <td><a class = "btn left-align" href="/stories/edit/{{id}}"><i class = "fa fa-pencil"></i> Edit</a>
+            <td><a class = "btn left-align" href="/discuss/edit/{{id}}"><i class = "fa fa-pencil"></i> Edit</a>
             <form action="/stories/{{id}}?_method=DELETE" method = "post" id="delete-form">
             <input type="hidden" name = "_method" value="DELETE">
             <button type = "submit" class="btn red"><i class = "fa fa-remove"></i>Delete</button>
