@@ -19,10 +19,15 @@ router.get('/', (req,res) => {
 router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
     res.render('discussions/add');
 });
-//add discussion form
-// router.get('/redirectwork', (req,res) => {
-//     res.send('Redirect work');
-// })
+//show particular dicussion
+router.get('/show/:id' , (req,res) => {
+Discuss.findOne({_id: req.params.id})
+.then(discuss => {
+  res.render('discussions/show');
+  discuss:discuss
+});
+});
+//create disucssion route
 router.post('/creatediscussion', (req,res) => {
 let allowComments;
 
@@ -47,6 +52,7 @@ let allowComments;
       res.redirect(`/discuss/redirectwork`);
     });
 });
+//edit form route
 router.get('/edit/:id', (req,res) => {
   Discuss.findOne({
     _id: req.params.id
@@ -89,6 +95,7 @@ router.put('/:id', (req, res) => {
       });
   });
 });
+//delete discussion route
 router.delete('/delete/:id' , (req,res) => {
    Discuss.remove({
      _id: req.params.id
