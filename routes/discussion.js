@@ -53,7 +53,7 @@ let allowComments;
   new Discuss(newDiscuss)
     .save()
     .then(discuss => {
-      res.redirect(`/discuss/dashboard`);
+      res.redirect(`/dashboard`);
     });
 });
 //edit form route
