@@ -22,9 +22,13 @@ router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
 //show particular dicussion
 router.get('/show/:id' , (req,res) => {
 Discuss.findOne({_id: req.params.id})
+.populate('user')
+  .populate('comments.commentUser')
 .then(discuss => {
-  res.render('discussions/show');
-  discuss:discuss
+  res.render('discussions/show', {
+    discuss:discuss
+  });
+ 
 });
 });
 //create disucssion route
