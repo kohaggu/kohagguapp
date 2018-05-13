@@ -20,7 +20,7 @@ router.get('/creatediscussion',ensureAuthenticated, (req,res) => {
     res.render('discussions/add');
 });
 //show particular dicussion
-router.get('/show/:id', ensureAuthenticated, (req,res) => {
+router.get('/show/:id', (req,res) => {
 Discuss.findOne({_id: req.params.id})
 .populate('user')
   .populate('comments.commentUser')
