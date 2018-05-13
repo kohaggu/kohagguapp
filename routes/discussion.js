@@ -109,4 +109,24 @@ router.delete('/delete/:id' , (req,res) => {
    })
 });
 
+// Add Comment
+router.post('/comment/:id', (req, res) => {
+  Discuss.findOne({
+    _id: req.params.id
+  })
+  .then(discuss => {
+    const newComment = {
+      commentBody: req.body.commentBody,
+      commentUser: req.user.id
+    }
+
+    // Add to comments array
+    discuss.comments.unshift(newComment);
+
+    discuss.save()
+      .then(discuss => {
+        res.redirect(`/discuss/show/${discuss.id}`);
+      });
+  });
+});
 module.exports = router;
