@@ -1,3 +1,23 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    
+    background-image: url("http://livewallpapers.info/wp-content/uploads/2017/09/Education-Wallpaper-HD-1.jpg");
+    background-color: black;
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+discus{
+  margin-left: 300px;
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -7,9 +27,7 @@ body {
 main {
   flex: 1 0 auto;
 }
-  .nav-wrapper .fa-bars {
-    font-size: 30px;
-  }
+
  
   .story-text{
     height: 100px;
@@ -37,9 +55,9 @@ main {
     /* background-repeat: no-repeat;
     background-size: cover; */
 /* } */ 
-.page-footer {
+/* .page-footer {
   background-color: #DBD380;
 }
 .navcolor{
   background-color: #DBD380;
-}
+} */

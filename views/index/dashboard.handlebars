@@ -1,8 +1,10 @@
-<h1>Welcome {{user.firstName}}</h1>
-<h4>Your discussions
+<br>
+<span class="w3-jumbo w3-hide-small" style="margin-left: 300px">Hello! {{user.firstName}}</span>
+
 </h4>
 {{#if discuss}}
-<table class="striped">
+<h4 style="margin-left: 300px">Your discussions
+<table  style="margin-left: 0px"  >
     <thead>
 <tr>
     <th>Title</th>
@@ -27,5 +29,6 @@
     </tbody>
 </table>
 {{else}}
-<p>you have not created any discuss yet</p>
+<h4 style="margin-left: 300px">You do not have any open thread.</h4><br><br><br><br><br>
+<br><h4 style="margin-left: 300px">Create one by clickong on the plus sign in the bottom right corner.</h4>
 {{/if}}
