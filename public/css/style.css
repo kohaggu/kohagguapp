@@ -42,6 +42,37 @@ main {
     height: 100%;
     /* background-image: url("images/abc.jpg"); */
 }
+/* 
+ */
+
+ footer{
+	background-color: #000000;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.22);
+	
+	padding-top: 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	font-family: 'Assistant',sans-serif
+}
+footer .tes{
+	color: white;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.22);
+  text-align: left;
+  padding-left: 10%;
+	padding-top: -2rem;
+	margin-top: 12rem;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	font-family: 'Assistant',sans-serif
+}
+
+
+footer .color {
+  color: white;
+  
+
+}
+
 
 /* .bg { 
     /* The image used */

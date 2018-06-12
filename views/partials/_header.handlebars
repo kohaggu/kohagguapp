@@ -17,6 +17,7 @@
           <i class="fa fa-envelope"></i> CONTACT</a>
         <a href="/auth/logout" class="w3-bar-item w3-button">
           <i class="fa fa-asterisk"></i> Logout</a>
+          
         
       </div>
 
@@ -38,3 +39,25 @@
     </div>
   </div>
 </nav>
+
+
+<!-- sidebar for mobile needs to be edited -->
+{{#if user}}
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="/dashboard" onclick="w3_close()" class="w3-bar-item w3-button">Welcome {{user.firstName}}</a>
+  <a href="/discuss" onclick="w3_close()" class="w3-bar-item w3-button">Discussions</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">NOTESDIYO</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="/auth/logout" onclick="w3_close()" class="w3-bar-item w3-button">Logout</a>
+</nav>
+{{else}}
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+   <a href="/auth/google" onclick="w3_close()" class="w3-bar-item w3-button">Login with GOOGLE</a>
+   <a href="/discuss" onclick="w3_close()" class="w3-bar-item w3-button">Discussions</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">NOTESDIYO</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+ {{/if}}
+
