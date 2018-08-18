@@ -1,0 +1,69 @@
+{{!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Compiled and minified CSS -->
+
+
+
+
+  <title>Notesdiyo</title>
+  {{> _header}} {{#if user}} {{> _addbutton}} {{/if}}
+</head>
+
+<body>
+
+  <main>
+    <div class="container">
+      <link rel="stylesheet" href="/css/layout.css"> --}}
+      <title>NOTESDIYO</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      {{!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"> --}}
+      <link rel="stylesheet" href="/css/style1.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+      
+
+      <link rel="stylesheet" href="/css/style.css"> {{> _header}} {{#if user}} {{> _addbutton}} {{/if}} {{{body}}} 
+
+
+ {{> _footer}}
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('.button-collapse').sideNav();
+      $('select').material_select();
+    });
+    CKEDITOR.replace('body', {
+      plugins: 'wysiwygarea,toolbar,basicstyles,link'
+    });
+  </script>
+      
+      {{!-- </div>
+  </main>
+
+  
+=======
+      <link rel="stylesheet" href="/css/style.css"> {{> _header}} {{#if user}} {{> _addbutton}} {{/if}} {{{body}}} {{!-- </div>
+  </main>
+
+  {{> _footer}}
+
+  
+</body>
+
+</html> --}}

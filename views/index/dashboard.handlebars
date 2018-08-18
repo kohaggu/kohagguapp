@@ -1,0 +1,81 @@
+<div style="height:100%">
+<div>
+    <br>
+    <br>
+    <br>
+    <span id="dis">Hello! {{user.firstName}}</span>
+
+    </h4>
+    {{#if discuss}}
+    <h2 id="dis">Your discussions</h2>
+    <br>
+    <div class="container">
+<table class="striped">
+    <thead>
+<tr>
+    <th>Title</th>
+    <th>Date</th>
+    <th>Subject</th>
+</tr>
+    </thead>
+    <tbody>
+        
+        {{#each discuss}}
+        <tr>
+            <td><a href="/discuss/show/{{id}}">{{title}}</a></td>
+            <td>{{formatDate date 'MMMM Do YYYY'}}</td>
+             <td><span class="dash-status">{{subject}}</span></td>    
+            <td><a class = "btn left-align" href="/discuss/edit/{{id}}"><i class = "fa fa-pencil"></i> Edit</a>
+            <form action="/discuss/delete/{{id}}?_method=DELETE" method = "post" id="delete-form">
+            <input type="hidden" name = "_method" value="DELETE">
+            <button type = "submit" class="btn red"><i class = "fa fa-remove"></i>Delete</button>
+            </form>
+            </td>
+     </tr>
+     {{/each}}
+     
+    </tbody>
+</table>
+</div>
+{{!-- <br><br> --}}
+{{!-- <div class="row">
+ 
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="center-align">
+           <h4>{{title}}</h4>
+        </div>
+        <div class="card-content center-align">
+          <h5>{{formatDate date 'MMMM Do YYYY'}}</h5>
+          <h4>{{subject}}</h4>
+          <br>
+        </div>
+        <div >
+          <a  style=" margin-left:5%;"class="btn orange" href="/discuss/show/{{id}}">Open</a>
+           <a class="btn grey" href="/discuss/edit/{{id}}">Edit</a>
+            <form action="/discuss/delete/{{id}}?_method=DELETE" method="post" id="delete-form">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn red">
+                            <i class="fa fa-remove"></i> Delete</button>
+                    </form></div>
+      </div>
+    </div> --}}
+
+    
+        
+           
+   
+    {{else}}
+    <h4 style="margin-left: 15%">You do not have any open thread.</h4>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h4 style="margin-left: 15%">Create one by clicking on the plus sign in the bottom right corner.</h4>
+    {{/if}}
+</div>
+
+
+</div>

@@ -1,0 +1,43 @@
+<br>
+<br>
+<br>
+<div>
+<span id="dis" style=" margin-left: 5%;">Start a Discussion:</span>
+<div class="row">
+    <form action="/discuss/creatediscussion" method = "post" class="col s12">
+    <div class="row">
+        <div class="input-field">
+            <input style="width: 60%; margin-left: 5%;"  type="text" name = "title">
+            <label style="width: 60%; margin-left: 5%;" for = "title">Title</label>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="input-field" style="width: 60%; margin-left: 5%;">
+           <select   name = "subject">
+               <option value = "physics" selected>Physics</option>
+               <option value = "chemistry">Chemistry</option>
+               <option value = "maths">Maths</option>
+               <option value = "computerscience">Computer Science</option>
+           </select>
+            <label for = "subject">Subject</label>
+        </div>
+    </div>
+    <div class="row" style=" margin-left: 5%;">
+        <p>
+            <input  type = "checkbox" name ="allowcomment" class="filled-in" id ="filled-in-box" checked = "checked">
+            <label for = "filled-in-box">Allow Comments</label>
+        </p>
+    </div>
+    <div class="row">
+        <div class="input-field" style=" margin-left: 5%; width:75%;">
+            <h5>Tell Us Your content</h5>
+            
+            <textarea rows="10" cols="20" name = "body"></textarea>
+    
+        </div>
+    </div>
+    <input style=" margin-left: 5%;" type="submit" value = "Save" class="btn">
+    </form>
+</div>
+</div>

@@ -1,0 +1,50 @@
+<div>
+<br>
+<br><br>
+<span  id="dis">Discussion Forum:</span>
+<div class="container">
+<form action="/discuss" method = "post" class="col s12">
+<div class="row">
+        <div class="input-field col s6" style="width:60%; padding-right:0px;">
+           <select name = "subject">
+               <option value = "ALL"disabled selected>All</option>
+               <option value = "chemistry">Chemistry</option>
+               <option value = "maths">Maths</option>
+               <option value = "computerscience">Computer Science</option>
+               <option value = "physics">Physics</option>
+           </select>
+            <label for = "subject">Subject</label>
+        
+        </div><br>
+    <input type="submit" class="btn red" style="margin-left:5%;"></div>
+     
+</form></div>
+
+<div class="row">
+  {{#each discuss}}
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          {{#if user}}
+             {{{editIcon user.id ../user.id id}}}
+          {{/if}}
+        </div>
+        <div class="card-content center-align">
+          <h5>{{title}}</h5>
+          <p class="story-text">{{stripTags (truncate body 150)}}</p>
+          <br>
+          <div class="chip">
+            <img src="{{user.image}}">
+            {{user.firstName}} {{user.lastName}}
+          </div>
+        </div>
+        <div class="card-action center-align">
+          <a class="btn grey" href="/discuss/show/{{id}}">Read More</a>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <p>No Discussion found</p>
+  {{/each}}
+</div>
+</div>

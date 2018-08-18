@@ -1,0 +1,43 @@
+<div style="height:100%">
+<br>
+
+<span  id="dis">Tution Found:</span>
+<div>
+{{#if tution}}
+{{#each tution}}
+
+<div class="row">
+  
+    <div class="col s10 m3">
+      <div class="card">
+        <div class="center-align">
+         <h2 >{{teachername}} </h2>
+        </div>
+        <div class="card-content center-align">
+          <h4>Fees: {{fees}}</h4>
+          <h4>Address: {{address}}</h4>
+          <br>
+          <div class="chip">
+            <h4>Subject: {{subject}}</h4>
+            <br>
+          </div >
+          <div class="center-align">
+         <h4>Contact No. : {{contactnumber}}</h4> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+{{/each}}
+
+{{else}}
+<br>
+<span id="dis">SORRY! No Tution Found :(</span>
+{{/if}}
+
+<br>
+<br><br>
+</div>
+
+</div>
+</div>

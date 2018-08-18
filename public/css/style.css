@@ -1,0 +1,169 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+/* full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    
+    background-image: url("/img/wall.jpg");
+    background-color: black;
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+discus{
+  margin-left: 300px;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+ 
+  .story-text{
+    height: 100px;
+  }
+  .dash-status{
+    text-transform: capitalize;
+  }
+  #delete-form{
+    display: inline-block;
+  }
+  body, html {
+    height: 100%;
+    /* background-image: url("images/abc.jpg"); */
+}
+/* 
+ */
+
+ footer{
+	background-color: #000000;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.22);
+	
+	padding-top: 1rem;
+	font-size: 1.1rem;
+	
+  font-family: 'Assistant',sans-serif;
+  position: relative;
+  
+  
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    
+  
+ }
+
+footer .tes{
+	color: white;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.22);
+  text-align: left;
+  padding-left: 10%;
+	padding-top: -2rem;
+	margin-top: 12rem;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	font-family: 'Assistant',sans-serif
+}
+.icons {
+  margin-left: 55rem;
+}
+
+footer .color {
+  color: white;
+  
+
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  padding-top: 60px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+@media (min-width: 320px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 4500px) {
+	#social-fb {
+		margin-left: 90%;
+	}
+}
+#social-fb {
+  margin-left: 60%;
+}
+#dis{
+  margin-left: 30px;
+  font-size: 40px;
+}
