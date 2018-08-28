@@ -19,15 +19,15 @@
               <img src="{{user.image}}" alt="" class="circle responsive-img" style="height:120px; width 120px;margin-left:50px;"> 
             </div>
 <a href="/dashboard">
-     Hi {{user.firstName}}</a>
+     Hi {{user.firstName}} <i class="fa fa-id-badge" aria-hidden="true"></i></a>
     <a href="/discuss">
-      Discussions</a>
-    <a href="/tution/register">Register Tution</a>
+      Discussions <i class="fa fa-commenting-o"></i> </a>
+    <a href="/tution/register">Register Tution <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
      <a href="/tution">
-     Find Tution</a>
+     Find Tution <i class="fa fa-search" aria-hidden="true"></i></a>
      
-    <a href="/contact">Contact</a>
-    <a href="/auth/logout">Logout</a>
+  
+    <a href="/auth/logout">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
   </div>
 
 {{else}}
@@ -36,10 +36,10 @@
     <a href="/auth/google">
       Google Login</a>
     <a href="/discuss">
-      Discussions</a>
-    <a href="/tution">Find Tution</a>
+      Discussions <i class="fa fa-commenting-o"></i></a>
+    <a href="/tution">Find Tution <i class="fa fa-search" aria-hidden="true"></i></a>
 
-    <a href="/contact">Contact</a>
+   
   </div>
 {{/if}} 
 
@@ -47,7 +47,7 @@
 <!-- Navbar (sit on top) -->
 <nav>
   <div class="w3-top" >
-    <div class="w3-bar w3-white " style="height : 70px">
+    <div class="w3-bar w3-white " style="height : 70px;">
       <span class="w3-bar-item w3-button w3-wide">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
       </span>

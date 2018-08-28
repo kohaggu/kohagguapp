@@ -31,7 +31,8 @@ Tution.findOne({teachername: req.body.teachername})
 .then((ttn) => {
     if(ttn)
     {
-        res.send('email already exist')
+        req.flash('success_msg', 'tution already registered');
+        res.redirect('/tution/register')
     }
     else{
         const ttn = {
