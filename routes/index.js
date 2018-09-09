@@ -11,7 +11,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/about',(req,res) => {
-   res.render('index/about');
+   res.render('layouts/about');
 });
 router.get('/dashboard', ensureAuthenticated,(req,res) => {
 Discuss.find({user:req.user.id})
