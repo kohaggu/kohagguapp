@@ -14,6 +14,7 @@ const keys = require('./config/keys');
 require('./models/User')
 require('./models/Discuss');
 require('./models/Tution');
+require('./models/Notes');
 // Passport Config
 require('./config/passport')(passport);
 //setting up routes
@@ -23,6 +24,7 @@ const auth = require('./routes/auth');
 const subject = require('./routes/subject');
 const tution = require('./routes/tution');
 const contact = require('./routes/contact')
+const notes = require('./routes/notes');
 // Map global promises
 mongoose.Promise = global.Promise;
 // Mongoose Connect
@@ -85,6 +87,7 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 //declaring routes
 app.use('/', index);
+app.use('/', notes);
 app.use('/auth', auth);
 app.use('/discuss', discussion);
 app.use('/subject', subject);

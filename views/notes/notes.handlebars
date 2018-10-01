@@ -1,0 +1,38 @@
+<div style="height:100%;">
+<div class="container">
+    <form action="/addnotes" method = "post" class="col s12">
+    <div class="row">   
+        <div class="input-field" style="width: 60%; margin-left: 5%;">
+           <select   name = "subject">
+               <option value = "physics" selected>Physics</option>
+               <option value = "chemistry">Chemistry</option>
+               <option value = "maths">Maths</option>
+               <option value = "computerscience">Computer Science</option>
+           </select>
+            <label for = "subject">Subject</label>
+        </div>
+    </div>
+
+     <div class="row">   
+        <div class="input-field" style="width: 60%; margin-left: 5%;">
+           <select   name = "class">
+               <option value = "elev" selected>11</option>
+               <option value = "twel">12</option>
+              
+           </select>
+            <label for = "subject">Subject</label>
+        </div>
+    </div>
+    
+    
+         <div class="row">
+        <div class="input-field">
+            <input style="width: 80%;"  type="text" name = "link" required>
+            <label for = "link">link</label>
+        </div>
+    </div>
+
+    <input type="submit" value = "Save" class="btn">
+    </form>
+</div>
+</div>

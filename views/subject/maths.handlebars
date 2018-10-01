@@ -1,4 +1,4 @@
-<div style="height:100%">
+<div style="height:200%">
     <div>
         <br>
         <br>
@@ -16,16 +16,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Introduction</td>
-                        <td> Date</td>
+                    {{#each notes}}
+                    <tr class="{{class}}">
+                        <td>{{subject}}</td>
+                        <td> {{class}}enth</td>
+                        
                         <td>
-                            <a class="btn left-align" href="#" download>
+                            <a class="btn left-align"  href="{{link}}" download>
                                 <i class="fa fa-download"></i> Download</a>
                         </td>
+                        
                     </tr>
+                    {{/each}}
                 </tbody>
-            </table>
+            </table><br><br>
         </div>
     </div>
 </div>
