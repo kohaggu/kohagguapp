@@ -11,7 +11,8 @@ router.post('/addnotes', (req,res) => {
     const notes = {
         subject:req.body.subject,
         class:req.body.class,
-        link:req.body.link
+        link:req.body.link,
+        name:req.body.name
     }
     console.log(notes);
 new Notes(notes)
