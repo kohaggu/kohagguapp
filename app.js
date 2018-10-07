@@ -49,7 +49,8 @@ const {
   stripTags,
   formatDate,
   select,
-  editIcon
+  editIcon,
+  ifEquals
 } = require('./helpers/hbs');
 
 app.engine('handlebars', exphbs({
@@ -58,7 +59,8 @@ app.engine('handlebars', exphbs({
     stripTags: stripTags,
     formatDate: formatDate,
     select: select,
-    editIcon: editIcon
+    editIcon: editIcon,
+    ifEquals:ifEquals
   },
   defaultLayout: 'main'
 }));
