@@ -52,9 +52,10 @@ router.get('/cs', (req,res) => {
 });
 
 router.post('/',(req,res) => {
+  console.log(req.body.subject)
   if(req.body.subject === 'ALL')
   {
-    Discuss.find({})
+    Discuss.find()
     .populate('user')
     .sort({date:'desc'})
     .then(discuss => {
