@@ -1,11 +1,11 @@
-<div style="height:200%">
-    <div>
+<div style="height:1000%">
+    <div class="container">
         <br>
         <br>
         <br>
-        <span id="dis">Chemistry Notes:</span>
+        <span id="dis">Chemistry Notes</span>
+        </div>
         <br>
-        
         <div class="container">
             <table class="striped">
 
@@ -16,11 +16,12 @@
                         <th>Last Updated</th>
                     </tr>
                 </thead>
+               <div class="filterDiv {{class}}">
                 <tbody>
                     {{#each notes}}
                     <tr class="{{class}}">
-                        <td>{{subject}}</td>
-                        <td> {{class}}enth</td>
+                        <td>{{name}}</td>
+                        
                         
                         <td>
                             <a class="btn left-align"  href="{{link}}" download>
@@ -29,10 +30,9 @@
                         
                     </tr>
                     {{/each}}
-
                 </tbody>
-            </table>
-            <br><br>
-        </div>
+                </div>
+            </table><br><br>
+        
     </div>
 </div>

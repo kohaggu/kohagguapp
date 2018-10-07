@@ -1,9 +1,10 @@
-<div style="height:300%">
-    <div>
+<div style="height:1000%">
+    <div class="container">
         <br>
         <br>
         <br>
         <span id="dis">Physics Notes</span>
+        </div>
         <br>
         <div class="container">
             <table class="striped">
@@ -18,8 +19,8 @@
                 <tbody>
                     {{#each notes}}
                     <tr class="{{class}}">
-                        <td>{{subject}}</td>
-                        <td> {{class}}enth</td>
+                        <td>{{name}}</td>
+                        
                         
                         <td>
                             <a class="btn left-align"  href="{{link}}" download>
@@ -29,8 +30,7 @@
                     </tr>
                     {{/each}}
                 </tbody>
-            </table>
-            <br><br>
-        </div>
+            </table><br><br>
+        
     </div>
 </div>
