@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const paginate = require('express-paginate');
 const router = express.Router();
 
 const Notes = mongoose.model('notes');
@@ -33,14 +34,30 @@ else
  }
  });
 
+ router.use(paginate.middleware(10, 50));
+router.get('/chemistry', async (req,res) => {
+     try {
 
-router.get('/chemistry', (req,res) => {
-   Notes.find({subject:'chemistry'})
-   .then(notes => {
-    res.render('subject/chemistry',{
-         notes:notes
-    });
-   })
+          const [ results, itemCount ] = await Promise.all([
+            Notes.find({subject:'chemistry'}).limit(req.query.limit).skip(req.skip).lean().exec(),
+          Notes.count({subject:'chemistry'})
+          ]);
+      
+          const pageCount = Math.ceil(itemCount / req.query.limit);
+      
+         
+            res.render('subject/chemistry', {
+              notes: results,
+              pageCount,
+              itemCount,
+              pages: paginate.getArrayPages(req)(3, pageCount, req.query.page)
+            });
+            console.log(paginate.getArrayPages(req)(3, pageCount, req.query.page), pageCount,itemCount);
+          
+      
+        } catch (err) {
+          next(err);
+        }
 
 });
 
